@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 
 # Load the sentiment analysis model
-filename = 'trained_model.sav'
+filename = '/content/Sentiment_Analysis/trained_model.sav'
 with open(filename, 'rb') as file:
     model = pickle.load(file)
 
@@ -26,7 +26,3 @@ if st.button('Analyze'):
         st.write(f'Sentiment: {prediction}')
     else:
         st.write('Please enter some text.')
-
-# Run the Streamlit app
-if __name__ == '__main__':
-    st.run()
